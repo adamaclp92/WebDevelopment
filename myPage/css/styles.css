@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  text-align: center;
+  font-family: 'Merriweather', sans-serif;
+}
+
+/*text-align berendez mindet, aminek nincs width property-je (gyerekelemnél)*/
+/*Ha a body-ban megadunk egy méretet (% vagy em), és utána a származtatott tag-en belül is adunk meg pl a H1-ben, akkor a két érték összeadódik
+/*px size-nál nem adja össze, mert az statikus méretmegadásupports
+/*a rem méretezés nem örökli a szülő méretet*/
+
+h1 {
+  font-family: 'Sacramento', sans-serif;
+  font-size: 5.625rem; /*  100%=16px=1em -> 90px/16*100=562.5% = 5.625em */
+  margin: 50px auto 0 auto;
+  color: #66BFBF;
+  line-height: 2;
+}
+
+h2 {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 2.5rem;
+  color: #66BFBF;
+  font-weight: normal;
+}
+
+h3 {
+  font-family: 'Montserrat Alternates', sans-serif;
+  color: #11999E;
+}
+
+.top-container {
+  background-color: #b3ffb3;
+  position: relative;
+  padding-top: 20px;
+}
+
+.pro {
+  text-decoration: underline;
+}
+
+.cloud1 {
+  position: absolute;
+  right: 400px;
+  top: 250px;
+}
+
+.cloud2 {
+  position: absolute;
+  top: 450px;
+  left:400px;
+}
+
+.adam {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}

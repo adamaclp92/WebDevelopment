@@ -1,0 +1,141 @@
+/*****************TAG SELECTORS**********/
+body {
+  background-color: #F2F5C8;
+  margin: 0;
+}
+
+
+hr {
+  border-color: grey;
+  border-style: none;
+  border-top-style: dotted;
+  border-width: 5px;
+  width: 10%;
+
+  -webkit-animation: 4s linear 0s infinite alternate move_eye;
+          animation: 4s linear 0s infinite alternate move_eye;
+}
+
+@-webkit-keyframes move_eye { from { margin-left: -20%; } to { margin-left: 100%; }  }
+        @keyframes move_eye { from { margin-left: -20%; } to { margin-left: 100%; }  }
+
+h1, h3 {
+  color: #66BFBF;
+}
+
+
+
+img {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+}
+
+/***********************CLASS SELECTORS*********/
+.pancake {
+  background-color: red;
+}
+
+.pancake:hover {
+  background-color: green;
+}
+
+
+.scissorHalf {
+  offset-path: path('M900,190  L993,245 V201  A11,11 0 0,1 1004,190  H1075  A11,11 0 0,1 1086,201  V300  L1294,423 H1216  A11,11 0 0,0 1205,434  V789  A11,11 0 0,1 1194,800  H606  A11,11 0 0,1 595,789  V434  A11,11 0 0,0 584,423  H506 L900,190');
+  animation: followpath 10s linear infinite;
+}
+
+@keyframes followpath {
+   to {
+     motion-offset: 100%;
+     offset-distance: 100%;
+   }
+}
+
+.middle-container {
+  background-color: red;
+  height: 200px;
+  width: 200px;
+  display:inline-block;
+  position:relative;
+  left:400px;
+}
+
+.bottom-container {
+  background-color: blue;
+  height: 200px;
+  width: 200px;
+  display:inline-block;
+  position:relative;
+  right: 200px;
+}
+
+.mostbottom-container{
+  background-color: yellow;
+  height: 200px;
+  width: 200px;
+  display:inline-block;
+  position:relative;
+  right: 200px;
+}
+
+.red {
+  background-color: red;
+  height: 200px;
+  width: 200px;
+  display: inline-block;
+  position: absolute;
+  left: 400px;
+  top: 1750px;
+}
+
+.blue {
+  background-color: blue;
+  height: 200px;
+  width: 200px;
+  display: inline-block;
+  position: absolute;
+  left: 200px;
+  top: 1550px;
+}
+
+.yellow{
+  background-color: yellow;
+  height: 200px;
+  width: 200px;
+  display: inline-block;
+  position: absolute;
+
+}
+
+/*inline és blocked elements
+Inline: pl az img, span, hogy nem foglalják el az egész sort
+De az a hátrányuk, hogy a width nem állítható rajtuk
+Blocked elements: pl h, p, div, alapértelmezetten elfoglalják az egész sort
+De az az előnyük, hogy állítható a width, de így se kerülnek egymás mellé az elementek
+az inline-block ami engedi egymás mellett és állítható a width
+*/
+
+/*Positions:
+static: alapértelmezetten így működnek
+relative: ilyenkor lehet őket left,right,top,bottommal mozgatni úgy,
+          hogy nincsenek hatással a körülötte levő elementekre
+          right marginnál megy tovább balra
+absolute: pl right marginnál jobbra kerül az elem,
+          és a szülű elem jobb szélétől számolja vissza a margint
+          (ha nincs más, akkor a body a szülő)
+
+fixed: ott marad a képernyőn lefelé görgetésnél is
+fix navbarnál tök jó
+
+
+/*****************ID SELECTORS*************/
+/*az ID-nek egyedinek kell lenni, másik tagnek nem lehet ugyanazt adni, class lehet*/
+#heading {
+  color: blue;
+}
+
+#heading:hover {
+  color: green;
+}
